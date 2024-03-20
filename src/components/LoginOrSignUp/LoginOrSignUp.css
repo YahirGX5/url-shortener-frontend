@@ -1,0 +1,9 @@
+.LoginButtons, .SignOutButton {
+    align-items: center;
+    padding-right: 30px;
+    min-width: 30px;
+}
+
+.LoginButtons button {
+    margin-right: 10px; 
+  }
