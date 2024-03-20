@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { loginContext } from '../../contexts/LoginContext';
-import { MainHeader } from '../Main Header/MainHeader';
+import { MainHeader } from '../../components/Main Header/MainHeader.tsx';
 
 import './App.css'
 
@@ -9,12 +9,12 @@ function App() {
 
   return (
     <loginContext.Provider value={{ login: login, setLogin: setLogin }}>
-      <main className='Main'>
-        <MainHeader />
+            <main className='Main'>
+            <MainHeader />
      
         
-      </main>
-    </loginContext.Provider>
+            </main>
+        </loginContext.Provider>
     
   )
 }
