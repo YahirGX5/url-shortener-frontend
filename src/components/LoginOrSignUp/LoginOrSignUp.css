@@ -4,6 +4,11 @@
     min-width: 30px;
 }
 
+.UrlsLink {
+    margin-right: 10px; 
+    color: #000000;
+}
+
 .LoginButtons button {
     margin-right: 10px; 
   }

@@ -1,4 +1,5 @@
 import { loginContext } from "../../contexts/LoginContext";
+import { Link } from "wouter";
 import { useContext } from "react";
 import './LoginOrSignUp.css';
 
@@ -8,6 +9,8 @@ export function LoginOrSignUp () {
     return (
         login ? (
             <article className="SignOutButton">
+                <Link href="/urls" className='UrlsLink'>My Urls</Link>
+
                 <button onClick={() => { setLogin(false) }}>
                     Sign out
                 </button>
