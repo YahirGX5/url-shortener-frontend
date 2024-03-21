@@ -1,0 +1,13 @@
+.FormContainer {
+    align-items: center;
+}
+
+.HomeForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.HomeFormButton {
+    margin-top: 10px;
+}
