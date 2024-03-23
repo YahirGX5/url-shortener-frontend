@@ -21,9 +21,9 @@ export function UrlsPage () {
         <section className="UrlsContainer">
             <h1>This is urls page</h1>
             <Link href="/home">Home</Link>
-            {urls ? 
-                urls.map(({ originalUrl, shortUrl }) => <UrlsViews originalUrl={originalUrl} shortUrl={shortUrl}/>)
-            : <h1>Nothing to see here</h1>} 
+            {urls.length === 0 ? 
+                <h1>Nothing to see here</h1>
+            : urls.map(({ originalUrl, shortUrl }) => <UrlsViews originalUrl={originalUrl} shortUrl={shortUrl} key={shortUrl}/>)} 
         </section> 
     )
 }

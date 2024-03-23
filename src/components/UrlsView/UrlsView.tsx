@@ -21,7 +21,7 @@ export function UrlsViews ({ originalUrl, shortUrl }: UrlsViewsProps) {
 
     return (
         <article className="UrlContainer">
-            <a href={originalUrl} className="AnchorUrl">{urlRef.current}</a>
+            <a href={originalUrl} className="AnchorUrl" target="_blank">{urlRef.current}</a>
             <section className="ButtonsContainer">
                 <button className="CopyButton" onClick={handleCopy}>📎</button>
                 <button className="ShareButton">Share</button>

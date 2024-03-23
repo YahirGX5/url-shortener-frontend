@@ -1,14 +1,20 @@
 import { useState } from 'react';
+/*
+import { useContext } from 'react';
+import { urlsContext } from '../../contexts/UrlsContext';
+*/
 
 import './HomePage.css';
 
 export function HomePage () {
     const [url, setUrl] = useState('');
+    // const { setUrls } = useContext(urlsContext);
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        //logic of handleSubmit
-        console.log(url);
+        // do a request to backend for generate the short url and retrieve it
+        // with the context setUrls, change the global urls with the response of request`
+        
         setUrl('');
     }
 

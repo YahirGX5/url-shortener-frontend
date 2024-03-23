@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   const [login, setLogin] = useState(false);
-  const [urls, setUrls] = useState([{ originalUrl: '', shortUrl: '' }]);
+  const [urls, setUrls] = useState([{ originalUrl: 'https://www.google.com.mx/?hl=es', shortUrl: 'https://wenascrack1234' }]);
 
   return (
     <main>
