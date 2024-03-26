@@ -1,0 +1,10 @@
+.UrlsContainer {
+    border: 2px solid #ffffff;
+    box-shadow: #000000 2px;
+    padding: 50px;
+}
+
+.UrlBox {
+    border: 2px solid #afeeeeee;
+    border-radius: 10px;
+}
