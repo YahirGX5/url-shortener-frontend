@@ -1,10 +1,9 @@
 .LoginButtons, .SignOutButton {
     align-items: center;
-    padding-right: 30px;
-    min-width: 30px;
+    padding-right: 10px;
 }
 
-.UrlsLink {
+.UrlsLink, .LinkToHome {
     margin-right: 10px; 
     color: #000000;
 }

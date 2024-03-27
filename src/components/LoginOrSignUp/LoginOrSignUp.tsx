@@ -9,14 +9,14 @@ export function LoginOrSignUp () {
     return (
         login ? (
             <article className="SignOutButton">
-                <Link href="/urls" className='UrlsLink'>My Urls</Link>
-
                 <button onClick={() => { setLogin(false) }}>
                     Sign out
                 </button>
             </article>
         ) : (
             <article className="LoginButtons">
+                <Link href="/home" className='LinkToHome'>Home</Link>
+                <Link href="/urls" className='UrlsLink'>My Urls</Link>
                 <button onClick={() => { setLogin(true) }}>Login</button>
                 <button onClick={() => { setLogin(true) }}>Sign Up</button>
             </article>

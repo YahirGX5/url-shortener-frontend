@@ -2,7 +2,6 @@ import { urlsContext } from "../../contexts/UrlsContext";
 import { loginContext } from "../../contexts/LoginContext";
 import { useContext, useEffect } from "react";
 import { UrlsViews } from "../../components/UrlsView/UrlsView";
-import { Link } from "wouter";
 
 import './UrlsPage.css';
 
@@ -19,8 +18,6 @@ export function UrlsPage () {
 
     return (
         <section className="UrlsContainer">
-            <h1>This is urls page</h1>
-            <Link href="/home">Home</Link>
             {urls.length === 0 ? 
                 <h1>Nothing to see here</h1>
             : urls.map(({ originalUrl, shortUrl }) => <UrlsViews originalUrl={originalUrl} shortUrl={shortUrl} key={shortUrl}/>)} 

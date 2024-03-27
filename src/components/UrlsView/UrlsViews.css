@@ -2,9 +2,14 @@
     border: 2px solid #ffffff;
     box-shadow: #000000 2px;
     padding: 50px;
+   
 }
 
 .UrlBox {
+    min-width: 90px;
     border: 2px solid #afeeeeee;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
 }

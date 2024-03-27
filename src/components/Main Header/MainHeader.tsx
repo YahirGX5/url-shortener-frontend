@@ -5,11 +5,17 @@ import "./MainHeader.css";
 export function MainHeader () {
     return (
         <header className='MainHeader'>
-            <img alt="Logo" src={ChainLogo} className="ChainLogo"/>
+            <section>
+                <img alt="Logo" src={ChainLogo} className="ChainLogo"/>
+            </section>
+            
 
             <h2 className="Title">URL SHORTENER</h2>
 
-            <LoginOrSignUp />
+            <section>
+                <LoginOrSignUp />
+            </section>
+            
         </header>
     )
 }
