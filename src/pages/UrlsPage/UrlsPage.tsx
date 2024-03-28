@@ -1,6 +1,6 @@
 import { urlsContext } from "../../contexts/UrlsContext";
 import { loginContext } from "../../contexts/LoginContext";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useMemo } from "react";
 import { UrlsViews } from "../../components/UrlsView/UrlsView";
 
 import './UrlsPage.css';
@@ -16,11 +16,13 @@ export function UrlsPage () {
         } 
     }, [login]);
 
+    const isUrlsEmpty = useMemo(() => urls.length === 0, [urls]);
+
     return (
-        <section className="UrlsContainer">
-            {urls.length === 0 ? 
+        <section className={isUrlsEmpty ? "UrlsEmptyContainer" : "UrlsContainer"}>
+            {isUrlsEmpty ? 
                 <h1>Nothing to see here</h1>
             : urls.map(({ originalUrl, shortUrl }) => <UrlsViews originalUrl={originalUrl} shortUrl={shortUrl} key={shortUrl}/>)} 
         </section> 
-    )
+    );
 }

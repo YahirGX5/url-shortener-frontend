@@ -9,11 +9,11 @@ import { Route, Switch, Redirect } from 'wouter';
 import './App.css';
 
 const urlsForTest = [
-  {"originalUrl": "[1](https://github.com/YahirGX5)", "shortUrl": "tttorsiwzgawkha"},
-  {"originalUrl": "[2](https://docs.nestjs.com/techniques/performance)", "shortUrl": "qcrggcglcnxtxoz"},
-  {"originalUrl": "[3](https://react.dev/reference/rules/rules-of-hooks)", "shortUrl": "qsrzrpebnqucrlb"},
-  {"originalUrl": "[4](https://react.dev/reference/react/createContext)", "shortUrl": "tttorsiwzgawkha"},
-  {"originalUrl": "[5](https://github.com/molefrog/wouter?tab=readme-ov-file)", "shortUrl": "qsrzrpebnqucrlb"}
+  {"originalUrl": "https://github.com/YahirGX5", "shortUrl": "tttorsiwzgawkha"},
+  {"originalUrl": "https://docs.nestjs.com/techniques/performance", "shortUrl": "qcrggcglcnxtxoz"},
+  {"originalUrl": "https://react.dev/reference/rules/rules-of-hooks", "shortUrl": "qsrzrpebnqucrhjb"},
+  {"originalUrl": "https://react.dev/reference/react/createContext", "shortUrl": "tttorsiwzgatkha"},
+  {"originalUrl": "https://github.com/molefrog/wouter?tab=readme-ov-file", "shortUrl": "qsrzrpebnqucrlb"}
 ]
 
 function App() {
