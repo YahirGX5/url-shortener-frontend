@@ -8,7 +8,7 @@ type UrlsViewsProps = {
     shortUrl: string
 }
 
-export function UrlsViews ({ originalUrl, shortUrl }: UrlsViewsProps) {
+export default function UrlsViews ({ originalUrl, shortUrl }: UrlsViewsProps) {
     const urlRef = useRef(shortUrl);
     const { urls, setUrls } = useContext(urlsContext);
 

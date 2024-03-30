@@ -1,11 +1,11 @@
 import { urlsContext } from "../../contexts/UrlsContext";
 import { loginContext } from "../../contexts/LoginContext";
 import { useContext, useEffect, useMemo } from "react";
-import { UrlsViews } from "../../components/UrlsView/UrlsView";
+import UrlsViews from "../../components/UrlsView/UrlsView";
 
 import './UrlsPage.css';
 
-export function UrlsPage () {
+export default function UrlsPage () {
     const { urls } = useContext(urlsContext);
     const { login } = useContext(loginContext);
 

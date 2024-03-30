@@ -6,7 +6,7 @@ import { urlsContext } from '../../contexts/UrlsContext';
 
 import './HomePage.css';
 
-export function HomePage () {
+export default function HomePage () {
     const [url, setUrl] = useState('');
     // const { setUrls } = useContext(urlsContext);
 
