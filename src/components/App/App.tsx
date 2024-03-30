@@ -1,7 +1,8 @@
 import { useState, lazy, Suspense } from 'react';
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage.tsx'));
 const UrlsPage = lazy(() => import('../../pages/UrlsPage/UrlsPage.tsx'));
-import { MainHeader } from '../../components/Main Header/MainHeader.tsx';
+import Loading from '../Loading/Loading.tsx';
+import { MainHeader } from '../Main Header/MainHeader.tsx';
 import { loginContext } from '../../contexts/LoginContext.ts';
 import { urlsContext } from '../../contexts/UrlsContext.ts';
 
@@ -24,7 +25,7 @@ function App() {
       </loginContext.Provider>
       
       <urlsContext.Provider value={{ urls: urls, setUrls: setUrls }}>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
           <Switch>
             <Route path='/home' component={HomePage}/>
             <Route path='/urls' component={UrlsPage}/>
@@ -32,10 +33,9 @@ function App() {
             <Route>Not found page</Route>
           </Switch>
         </Suspense>
-      </urlsContext.Provider>
-        
+      </urlsContext.Provider>   
     </main>
   )
 }
 
-export default App
+export default App;

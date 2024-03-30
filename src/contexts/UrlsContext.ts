@@ -6,7 +6,7 @@ type Urls = {
 }[]
 
 interface IUrlsContext {
-    urls: Urls,
+    urls: Urls | null,
     setUrls: React.Dispatch<React.SetStateAction<Urls>>
 }
 
