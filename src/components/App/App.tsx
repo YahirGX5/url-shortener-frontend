@@ -2,6 +2,7 @@ import { useState, lazy, Suspense } from 'react';
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage.tsx'));
 const UrlsPage = lazy(() => import('../../pages/UrlsPage/UrlsPage.tsx'));
 import Loading from '../Loading/Loading.tsx';
+import backgroundVideo from '../../assets/background.mp4';
 import { MainHeader } from '../Main Header/MainHeader.tsx';
 import { loginContext } from '../../contexts/LoginContext.ts';
 import { urlsContext } from '../../contexts/UrlsContext.ts';
@@ -20,6 +21,10 @@ function App() {
 
   return (
     <main>
+      <video autoPlay loop muted className='videoBackground'>
+          <source src={backgroundVideo} type="video/mp4"/>
+      </video>
+
       <loginContext.Provider value={{ login: login, setLogin: setLogin }}>
         <MainHeader />
       </loginContext.Provider>

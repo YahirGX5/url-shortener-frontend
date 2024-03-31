@@ -13,7 +13,7 @@ export default function UrlsViews ({ originalUrl, shortUrl }: UrlsViewsProps) {
     const { urls, setUrls } = useContext(urlsContext);
 
     const handleDelete = () => {
-        setUrls(urls.filter(url => url.shortUrl !== urlRef.current));
+        setUrls(urls!.filter(url => url.shortUrl !== urlRef.current));
 
     }
 
