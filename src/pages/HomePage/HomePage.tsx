@@ -10,12 +10,23 @@ export default function HomePage () {
     const [url, setUrl] = useState('');
     // const { setUrls } = useContext(urlsContext);
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         // do a request to backend for generate the short url and retrieve it
         // with the context setUrls, change the global urls with the response of request`
+        /*
+        const response = await fetch('https://url-back/v1/api/create-url', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ WENAS: 'hola' })
+        });
+
+        const dataInJson = response.json();
         
-        setUrl('');
+        setUrl(dataInJson.data);
+        */
     }
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
