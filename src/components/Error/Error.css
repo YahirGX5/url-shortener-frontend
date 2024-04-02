@@ -1,0 +1,7 @@
+.ErrorContainer {
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}

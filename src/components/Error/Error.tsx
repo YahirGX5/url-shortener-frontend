@@ -1,12 +1,13 @@
+import './Error.css';
+
 type ErrorTypes = {
-    errorToShow: string,
-    codeOfError: number
+    errorToShow: string
 }
 
-export default function Error ({ errorToShow, codeOfError }: ErrorTypes) {
+export default function Error ({ errorToShow }: ErrorTypes) {
     return (
         <article className="ErrorContainer">
-            <h2>{codeOfError}</h2>
+            <h2>Error...</h2>
             <p>{errorToShow}</p>
         </article>
     )
