@@ -6,6 +6,7 @@ const ErrorComponent = lazy(() => import('../Error/Error.tsx'));
 
 import Loading from '../Loading/Loading.tsx';
 import backgroundVideo from '../../assets/background.mp4';
+import MetricsPage from '../../pages/MetricsPage/MetricsPage.tsx';
 
 import { MainHeader } from '../Main Header/MainHeader.tsx';
 import { loginContext } from '../../contexts/LoginContext.ts';
@@ -39,6 +40,7 @@ function App() {
           <Suspense fallback={<Loading />}>
             {error && <ErrorComponent errorToShow={error}/>}
             <Switch>
+              <Route path='/metrics' component={MetricsPage}/>
               <Route path='/home' component={HomePage}/>
               <Route path='/urls' component={UrlsPage}/>
               <Route path='/'><Redirect to='/home' /></Route>

@@ -17,6 +17,7 @@ export function LoginOrSignUp () {
             <article className="LoginButtons">
                 <Link href="/home" className='LinkToHome'>Home</Link>
                 <Link href="/urls" className='UrlsLink'>My Urls</Link>
+                <Link href="/metrics" className='MetricsLink'>Metrics</Link>
                 <button onClick={() => { setLogin(true) }}>Login</button>
                 <button onClick={() => { setLogin(true) }}>Sign Up</button>
             </article>
