@@ -17,7 +17,12 @@ import { Route, Switch, Redirect } from 'wouter';
 import './App.css';
 
 const urlsForTest = [
-  {"originalUrl": "", "shortUrl": ""}
+  {"originalUrl": "https://www.google.com", "shortUrl": "g123456789"},
+  {"originalUrl": "https://www.github.com", "shortUrl": "gh12345678"},
+  {"originalUrl": "https://www.youtube.com", "shortUrl": "yt12345678"},
+  {"originalUrl": "https://www.twitch.tv", "shortUrl": "tw12345678"},
+  {"originalUrl": "https://www.microsoft.com", "shortUrl": "ms12345678"},
+  {"originalUrl": "https://www.apple.com", "shortUrl": "ap12345678"}
 ]
 
 function App() {

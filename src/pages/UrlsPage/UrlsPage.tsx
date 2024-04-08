@@ -16,13 +16,13 @@ export default function UrlsPage () {
         } 
     }, [login]);
 
-    const isUrlsEmpty = useMemo(() => urls.length === 0, [urls]);
+    const isUrlsEmpty = useMemo(() => urls?.length === 0, [urls]);
 
     return (
         <section className={isUrlsEmpty ? "UrlsEmptyContainer" : "UrlsContainer"}>
             {isUrlsEmpty ? 
                 <h1>Nothing to see here</h1>
-            : urls.map(({ originalUrl, shortUrl }) => <UrlsViews originalUrl={originalUrl} shortUrl={shortUrl} key={shortUrl}/>)} 
+            : urls?.map(({ originalUrl, shortUrl }) => <UrlsViews originalUrl={originalUrl} shortUrl={shortUrl} key={shortUrl}/>)} 
         </section> 
     );
 }
