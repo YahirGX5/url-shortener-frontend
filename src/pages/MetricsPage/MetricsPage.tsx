@@ -1,6 +1,7 @@
 import { DndContext, useDroppable, useDraggable, rectIntersection, DragEndEvent } from '@dnd-kit/core';
 import { useContext, useMemo, useState } from 'react';
 import { urlsContext } from '../../contexts/UrlsContext';
+import { errorContext } from '../../contexts/ErrorContext';
 import { CSS } from '@dnd-kit/utilities';
 
 import Stats, { StatsProps } from '../../components/Stats/Stats';
@@ -46,6 +47,7 @@ function DraggableUrl({ identifier, dataOfUrl }: { identifier: string, dataOfUrl
 export default function MetricsPage () {
     const [droppableData, setDroppableData] = useState<StatsProps | null>(null);
     const { urls } = useContext(urlsContext);
+    const { setError } = useContext(errorContext);
     const isUrlsEmpty = useMemo(() => urls?.length === 0, [urls]);
 
 
@@ -53,10 +55,17 @@ export default function MetricsPage () {
         const { active, over } = event;
         if (over?.id === 1 && active.id) {
             setDroppableData(null);
-            console.log("draggable data", active.data.current!.content);
-        } else {
-            console.log("drop in an area");
-        }
+            const response = await fetch('https://mi-back/urls', {
+                method: "GET",
+                headers: { "Content-Type": "application/json" }
+            });
+
+            const responseData = await response.json();
+
+            if (!response.ok) setError(responseData.error);
+
+            setDroppableData(responseData.data);
+        } 
     }
 
     return (
