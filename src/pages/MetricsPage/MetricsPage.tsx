@@ -5,6 +5,13 @@ import { CSS } from '@dnd-kit/utilities';
 
 import './MetricsPage.css';
 
+type UrlData = {
+    numberOfVisits: number,
+    expirationDay: Date,
+    daysToExpiration: number
+}
+
+
 function DroppableArea ({ id }: { id: string }) {
     const { setNodeRef } = useDroppable({ id });
 
@@ -44,18 +51,12 @@ function DraggableUrl({ identifier, dataOfUrl }: { identifier: string, dataOfUrl
 }
 
 export default function MetricsPage () {
+    const [droppableData, setDroppableData] = useState<null | UrlData>(null);
     const { urls } = useContext(urlsContext);
     const isUrlsEmpty = useMemo(() => urls?.length === 0, [urls]);
 
-    function handleDragEnd(event: DragEndEvent) {
-        /*
-        const { active, over } = event;
-        if (over) {
-            
-        }
 
-        create a custom hook for do requests
-        */
+    async function handleDragEnd (event: DragEndEvent) {
     }
 
     return (
