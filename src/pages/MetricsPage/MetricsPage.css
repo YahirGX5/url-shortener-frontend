@@ -6,9 +6,9 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    min-width: 300px;
-    min-height: 300px;
+    justify-content: space-around;
+    min-width: 500px;
+    min-height: 500px;
 }
 
 .DroppableArea {
