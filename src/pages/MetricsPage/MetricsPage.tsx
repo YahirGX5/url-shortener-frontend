@@ -52,20 +52,29 @@ export default function MetricsPage () {
 
 
     async function handleDragEnd (event: DragEndEvent) {
-        const { active, over } = event;
-        if (over?.id === 1 && active.id) {
-            setDroppableData(null);
-            const response = await fetch('https://mi-back/urls', {
-                method: "GET",
-                headers: { "Content-Type": "application/json" }
-            });
-
-            const responseData = await response.json();
-
-            if (!response.ok) setError(responseData.error);
-
-            setDroppableData(responseData.data);
-        } 
+        try {
+            const { active, over } = event;
+            if (over?.id === 1 && active.id) {
+                const response = await fetch('https://mi-back/urls', {
+                    method: "GET",
+                    headers: { "Content-Type": "application/json" }
+                });
+    
+                const responseData = await response.json();
+    
+                if (!response.ok) setError(responseData.error);
+    
+                setDroppableData(responseData.data);
+            } 
+        } catch (error) {
+            if (typeof error === 'string') {
+                setError(error);
+            } else if (error instanceof Error) {
+                setError(error.message);
+            } else {
+                setError('Ha ocurrido un error desconocido');
+            }
+        }
     }
 
     return (
